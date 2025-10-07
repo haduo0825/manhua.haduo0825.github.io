@@ -11,7 +11,7 @@ async function track(key, extraData = {}) {
         }
       };
   
-      await fetch('http://118.31.188.157:3000/api/track', {
+      await fetch('https://explain-improved-mary-derby.trycloudflare.com/api/track', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
