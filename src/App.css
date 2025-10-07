@@ -1,0 +1,39 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0,0,0,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0,0,0,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(0,0,0,0.1) 0%, transparent 50%),
+    #f8f8f8;
+  padding: 20px;
+  position: relative;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+  pointer-events: none;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+}
