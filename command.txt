@@ -1,0 +1,1 @@
+scp -r /Users/wangbingyue/code/practice/manhua/src/img/* root@118.31.188.157:/home/images/
