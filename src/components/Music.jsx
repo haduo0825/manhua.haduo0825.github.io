@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './Music.css'
+import xiaoyu from '../assets/xiaoyu.mp3'
 
 function Music() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -47,7 +48,7 @@ function Music() {
       </button>
       <audio
         ref={audioRef}
-        src="http://118.31.188.157:9000/xiaoyu.mp3"
+        src={xiaoyu}
         autoPlay
         onLoad={togglePlay}
         loop
