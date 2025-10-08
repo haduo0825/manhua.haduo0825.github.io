@@ -15,12 +15,11 @@ async function track(key, extraData = {}) {
         data: {
           ip: await getIp(), // 获取IP地址
           ua: navigator.userAgent, // 获取用户UA
-          time: new Date().toISOString(), // 获取当前时间
+          time: new Date().toLocaleString(), // 获取当前时间
           deviceId: deviceId, // 使用设备指纹ID
           ...extraData
         }
       };
-
   
       await fetch('https://explain-improved-mary-derby.trycloudflare.com/api/track', {
         method: 'POST',
